@@ -4,6 +4,7 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import LoanApplication from "../pages/LoanApplication";
+import PredictionResult from "../pages/PredictionResult";
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -26,6 +27,15 @@ const AppRoutes = () => (
     </PrivateRoute>
   }
 />
+<Route
+  path="/result"
+  element={
+    <PrivateRoute>
+      <PredictionResult />
+    </PrivateRoute>
+  }
+/>
+
 
     </Routes>
   </BrowserRouter>
