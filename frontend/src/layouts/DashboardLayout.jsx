@@ -2,9 +2,16 @@ import Sidebar from "../components/sidebar/Sidebar";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <div className="flex min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen w-full flex bg-gray-950 text-white">
+      
+      {/* Sidebar */}
       <Sidebar />
-      <main className="flex-1 p-8">{children}</main>
+
+      {/* Main area takes FULL remaining width */}
+      <main className="flex-1 px-8 py-8">
+        {children}
+      </main>
+
     </div>
   );
 };

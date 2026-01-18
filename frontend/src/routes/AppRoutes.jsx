@@ -3,6 +3,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import LoanApplication from "../pages/LoanApplication";
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -17,6 +18,15 @@ const AppRoutes = () => (
           </PrivateRoute>
         }
       />
+<Route
+  path="/loan"
+  element={
+    <PrivateRoute>
+      <LoanApplication />
+    </PrivateRoute>
+  }
+/>
+
     </Routes>
   </BrowserRouter>
 );
